@@ -1,0 +1,89 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+body {
+    background-color: #1d2026;
+    color: lightcoral;
+}
+/* color: #07575b; */
+
+.flex_cont {
+    display: flex;
+}
+
+.flex_item {
+    flex:1;
+}
+
+.nav_item {
+    text-align: center;
+}
+
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.about_me {
+    margin-top: 10%;
+    font-size: 25px;
+}
+
+.about_me h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    color: antiquewhite;
+}
+
+.my_pic {
+    margin-top: 5%;
+}
+
+.contact_details h1 {
+    font-size: 50px;
+    margin-top: 20%;
+    color: antiquewhite;
+}
+
+.contact_form {
+    margin-top: 8%;
+    margin-right: 30px;
+}
+
+form input{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 15px;
+    border-radius: 10px;
+    background: #262626;
+    color: antiquewhite;
+}
+
+.btn-primary {
+    background-color: lightcoral;
+    border: lightcoral;
+}
+
+.btn-primary:hover {
+    text-decoration: none;
+    background-color: antiquewhite;
+    color: lightcoral;
+}
+
+.contact_details p {
+    margin-left: 25px;
+}
+
+.rating input {
+    accent-color: lightcoral;
+}
+
