@@ -7,7 +7,28 @@ body {
     background-color: #1d2026;
     color: lightcoral;
 }
-/* color: #07575b; */
+
+.light_mode{
+    background-color: white;
+    color: lightcoral;
+}
+
+.light_mode nav a, .light_mode nav span {
+    color: #1d2026;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.light_mode div h1 {
+    color: #1d2026;
+}
+
+.light_mode .btn-primary:hover {
+    text-decoration: none;
+    background-color: #1d2026;
+    color: lightcoral;
+}
+
 
 .flex_cont {
     display: flex;
@@ -21,16 +42,22 @@ body {
     text-align: center;
 }
 
-nav a {
+nav a, nav span{
     color: antiquewhite;
     text-decoration: none;
     font-size: 18px;
 }
 
-nav a:hover {
+nav a:hover, nav span:hover {
     text-decoration: none;
     color: lightcoral;
+    cursor: pointer;
 }
+
+.menu {
+    visibility: hidden;
+}
+
 
 .about_me {
     margin-top: 10%;
@@ -86,4 +113,3 @@ form input{
 .rating input {
     accent-color: lightcoral;
 }
-
