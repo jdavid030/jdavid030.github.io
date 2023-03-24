@@ -1,11 +1,11 @@
 * {
-    margin: 5px;
     padding: 0;
 }
 
 body {
     background-color: #1d2026;
     color: lightcoral;
+    margin: 15px;
 }
 
 .light_mode{
@@ -42,13 +42,14 @@ body {
     text-align: center;
 }
 
-nav a, nav span{
+nav a {
     color: antiquewhite;
     text-decoration: none;
     font-size: 18px;
+    display: inline-block;
 }
 
-nav a:hover, nav span:hover {
+nav a:hover {
     text-decoration: none;
     color: lightcoral;
     cursor: pointer;
