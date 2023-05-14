@@ -19,7 +19,11 @@ body {
     font-size: 18px;
 }
 
-.light_mode div h1 {
+.light_mode .about_me h1 {
+    color: #1d2026;
+}
+
+.light_mode .about_me .text.first-text{
     color: #1d2026;
 }
 
@@ -27,6 +31,18 @@ body {
     text-decoration: none;
     background-color: #1d2026;
     color: lightcoral;
+}
+
+.light_mode .text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid lightcoral;
+    animation: animate 3s steps(12) infinite;
 }
 
 
@@ -68,7 +84,41 @@ nav a:hover {
 .about_me h1 {
     font-size: 50px;
     margin-top: 20px;
+    margin-left: 10px;
     color: antiquewhite;
+}
+
+.about_me .text{
+    position: relative;
+    color: lightcoral;
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.about_me .text.first-text{
+    color: antiquewhite;
+}
+
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1d2026;
+    border-left: 2px solid lightcoral;
+    animation: animate 3s steps(15) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
 }
 
 .my_pic {
@@ -80,6 +130,18 @@ nav a:hover {
     margin-top: 20%;
     color: antiquewhite;
 }
+
+.contact_details p{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.light_mode .contact_details h1 {
+    font-size: 50px;
+    margin-top: 20%;
+    color: #1d2026;
+}
+
 
 .contact_form {
     margin-top: 8%;
@@ -111,6 +173,9 @@ form input{
     margin-left: 25px;
 }
 
-.rating input {
-    accent-color: lightcoral;
+.pdf-viewer{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    
 }

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
 </head>
 
 <body>
@@ -14,22 +15,16 @@
             <a href="index.html">Home</a>
         </div>
         <div class="flex_item nav_item">
-            <a onmouseover="show('dropdown')">Experience</a>
-            <div class="menu" id="dropdown" onmouseover="show('dropdown')">
-                <div class="flex_item nav_item">
-                    <a href="experience.html">Work Experiences</a>
-                </div>
-                <div class="flex_item nav_item">
-                    <a href="projects.html">Projects</a>
-                </div>
-            </div>
+            <a>Resume</a>
         </div>
         <div class="flex_item nav_item">
-            <a href="contact.html">Contact Me</a>
+            <a href="contact.php">Contact Me</a>
         </div>
         <div class="flex_item nav_item">
-            <button type="button" class="btn btn-primary" onclick="toggleColorMode()">light mode</button>
+            <button id="toggle" type="button" class="btn btn-primary" onclick="toggleColorMode()">Light Mode</button>
         </div>
     </nav>
-    <h1 style="text-align: center;"> Work experience available soon</h1>
+    <div class="pdf-viewer">
+        <embed src="./Resume.pdf" type="application/pdf" width="80%" height="600px"/>
+    </div>
 </body>

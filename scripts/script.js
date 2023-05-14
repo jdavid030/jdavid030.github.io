@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.querySelector('body');
+    const mode = localStorage.getItem('mode');
+    var elem = document.getElementById("toggle");
+
+    if (mode === 'light') {
+        elem.innerHTML = "Dark Mode";
+        body.classList.add('light_mode');
+    } else {
+        body.classList.remove('light_mode');
+        elem.innerHtml = "Light Mode";
+        localStorage.setItem("mode", "dark");
+    }
+});
+
 function emailValid(address)
 {
     var p = address.search(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})$/);
@@ -17,29 +32,11 @@ function contactFormValidate()
     
     emailOK = emailValid(email);
     
-    if(emailOK){
-        displayDetails(formObj, email);
-    } else {
+    if(!emailOK){
         alert("Error: Invalid e-mail address.");
     }
 
     return emailOK
-}
-
-function displayDetails(formObj, email)
-{
-    var name = formObj.name.value;
-    var number = formObj.number.value;
-
-    var nameLen = name.length;
-    var numberLen = number.length;
-    var emailLen = email.length;
-
-    var text = "Contact info\n" +
-        "Your name: " + name + " Number of letters: " + nameLen + "\n" +
-        "Your email: " + email + " Number of letters: " + emailLen + "\n" +
-        "Your number: " + number + " Number of letters: " + numberLen + "\n";
-    alert(text);
 }
 
 
@@ -71,10 +68,17 @@ function hide()
 function toggleColorMode(){
     var body = document.body;
     var elem = document.getElementById("toggle");
-    body.classList.toggle("light_mode")
+
+    //in light mode switch to dark mode
     if(body.classList.contains("light_mode")){
-        elem.innerHTML = "Dark Mode";
-    } else {
         elem.innerHTML = "Light Mode";
+        body.classList.remove("light_mode");
+        localStorage.setItem("mode", "dark");
+    // switch from dark to light mode
+    } else {
+        elem.innerHTML = "Dark Mode";
+        body.classList.add("light_mode");
+        localStorage.setItem("mode", "light");
     }
 }
+
